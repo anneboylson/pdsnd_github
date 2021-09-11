@@ -1,4 +1,6 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+>**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. 
+Clone the remote repository to your local machine. 
+Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
 11/09/2021
@@ -9,7 +11,7 @@ anneboylson/pdsnd_github
 Replace the Project Title
 
 ### Description
-Update bikeshare.py for assessment 3
+Update bikeshare.py and readme.md for assessment 3
 Describe what your project is about and what it does
 
 ### Files used
