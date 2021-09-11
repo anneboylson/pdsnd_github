@@ -14,23 +14,23 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!\n')
-    
+    print('Welcome! Let\'s explore some US bikeshare data!\n')
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('Which city would you like to see data for? Chicago, New York City or Washington?\n ').lower()
     while city not in ['chicago', 'new york city', 'washington']:
         city = input ('Invalid selection. Please choose between Chicago, New York City or Washington.\n').lower()
-   
+
     # get user input for month (all, january, february, ... , june)
     month = input ('What month would you like to see data for? Or All?\n').lower()
     while month not in ['january', 'february', 'march', 'april', 'may', 'june', 'all']:
         month = input ('Invalid selection. Please choose from January, February, March, April, May, June or All.\n').lower()
-    
+
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input ('What day would you like to see data for? Or All?\n').lower()
     while day not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']:
         day = input ('Error. Please enter Monday-Sunday or \'all\'.\n').lower()
-    print('The filters you selected are; \n City: {} \n Month: {} \n Day: {}'.format(city, month, day)) 
+    print('The filters you selected are; \n City: {} \n Month: {} \n Day: {}'.format(city, month, day))
     print('-'*40)
     return city, month, day
 
@@ -47,7 +47,7 @@ def load_data(city, month, day):
     df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
-    
+
     # Create start month day and hour columns to answer the frequent times of travel descriptive statistics questions
     df['Start Month'] = df['Start Time'].dt.month_name()
     df['Start Day'] = df['Start Time'].dt.day_name()
@@ -92,7 +92,7 @@ def time_stats(df, city, month, day):
     # display the most common start hour
     print('Most Popular Start Hour: {} Count = {}'.format(df['Start Hour'].mode()[
           0], df[df['Start Hour'] == df['Start Hour'].mode()[0]]['Start Time'].count()))
-    
+
     # Display the filters that were used to get this result
     print('\nThe filters you selected are \nCity: {} \nMonth: {} \nDay: {}'.format(city, month, day))
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -129,25 +129,25 @@ def trip_duration_stats(df, city, month, day):
     start_time = time.time()
     if month.title() != 'All':
         if day.title() != 'All':
-            print('Total travel time in {} was: {} hours or {} minutes or {} seconds on {}s in {}'.format(city, df['Trip Duration Hours'].sum().round(2), 
+            print('Total travel time in {} was: {} hours or {} minutes or {} seconds on {}s in {}'.format(city, df['Trip Duration Hours'].sum().round(2),
             df['Trip Duration Minutes'].sum().round(2), df['Trip Duration'].sum().round(2), day, month), '\n')
-            print('The average travel time per ride in {} was: {} hours or {} minutes or {} second on {}s in {}'.format(city, 
+            print('The average travel time per ride in {} was: {} hours or {} minutes or {} second on {}s in {}'.format(city,
             df['Trip Duration Hours'].mean().round(2), df['Trip Duration Minutes'].mean().round(2), df['Trip Duration'].mean().round(2), day, month))
         else:
-            print('Total travel time in {} was: {} hours or {} minutes or {} seconds in {}'.format(city, df['Trip Duration Hours'].sum().round(2), 
+            print('Total travel time in {} was: {} hours or {} minutes or {} seconds in {}'.format(city, df['Trip Duration Hours'].sum().round(2),
             df['Trip Duration Minutes'].sum().round(2), df['Trip Duration'].sum().round(2), month), '\n')
             print('The average travel time per ride in {} was: {} hours or {} minutes or {} seconds in {}'.format(
                 city, df['Trip Duration Hours'].mean().round(2), df['Trip Duration Minutes'].mean().round(2), df['Trip Duration'].mean().round(2), month))
     else:
         if day.title() != 'All':
-            print('Total travel time in {} was: {} hours or {} minutes or {} second on {}s'.format(city, df['Trip Duration Hours'].sum().round(2), 
+            print('Total travel time in {} was: {} hours or {} minutes or {} second on {}s'.format(city, df['Trip Duration Hours'].sum().round(2),
             df['Trip Duration Minutes'].sum().round(2), df['Trip Duration'].sum().round(2), day), '\n')
-            print('The average travel time per ride in {} was: {} hours or {} minutes or {} seconds on {}s'.format(city, df['Trip Duration Hours'].mean().round(2), 
+            print('The average travel time per ride in {} was: {} hours or {} minutes or {} seconds on {}s'.format(city, df['Trip Duration Hours'].mean().round(2),
             df['Trip Duration Minutes'].mean().round(2), df['Trip Duration'].mean().round(2), day))
         else:
-            print('Total travel time in {} was: {} hours or {} minutes or {} seconds'.format(city, df['Trip Duration Hours'].sum().round(2), 
+            print('Total travel time in {} was: {} hours or {} minutes or {} seconds'.format(city, df['Trip Duration Hours'].sum().round(2),
             df['Trip Duration Minutes'].sum().round(2), df['Trip Duration'].sum().round(2)), '\n')
-            print('The average travel time per ride in {} was: {} hours or {} minutes or {} seconds'.format(city, df['Trip Duration Hours'].mean().round(2), 
+            print('The average travel time per ride in {} was: {} hours or {} minutes or {} seconds'.format(city, df['Trip Duration Hours'].mean().round(2),
             df['Trip Duration Minutes'].mean().round(2), df['Trip Duration'].mean().round(2)))
 
     # Display the filters that were used to get this result
