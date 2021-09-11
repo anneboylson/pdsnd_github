@@ -31,7 +31,7 @@ def get_filters():
     while day not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']:
         day = input ('Error. Please enter Monday-Sunday or \'all\'.\n').lower()
     print('The filters you selected are; \n City: {} \n Month: {} \n Day: {}'.format(city, month, day))
-    print('-'*50)
+    print('-'*40)
     return city, month, day
 
 def load_data(city, month, day):
@@ -96,7 +96,7 @@ def time_stats(df, city, month, day):
     # Display the filters that were used to get this result
     print('\nThe filters you selected are \nCity: {} \nMonth: {} \nDay: {}'.format(city, month, day))
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*50)
+    print('-'*40)
 
 def station_stats(df, city, month, day):
     """Displays statistics on the most popular stations and trip."""
@@ -121,7 +121,7 @@ def station_stats(df, city, month, day):
     print('\nThe filters you selected are \nCity: {} \nMonth: {} \nDay: {}'.format(city, month, day))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*50)
+    print('-'*40)
 
 def trip_duration_stats(df, city, month, day):
     """Displays statistics on the total and average trip duration."""
@@ -153,7 +153,7 @@ def trip_duration_stats(df, city, month, day):
     # Display the filters that were used to get this result
     print('\nThe filters you selected are \nCity: {} \nMonth: {} \nDay: {}'.format(city, month, day))
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*50)
+    print('-'*40)
 
 def user_stats(df, city, month, day):
     """Displays statistics on bikeshare users."""
@@ -182,7 +182,7 @@ def user_stats(df, city, month, day):
     # Display the filters that were used to get this result
     print('\nThe filters you selected are \nCity: {} \nMonth: {} \nDay: {}'.format(city, month, day))
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*50)
+    print('-'*40)
 
 
 def main():
@@ -212,7 +212,7 @@ def main():
         restart = input('\nWould you like to restart? Enter \'yes\' or \'no\'.\n')
         if restart.lower() != 'yes':
             print('Have a wonderful day!\n')
-            print('-'*50)
+            print('-'*40)
             break
 
 if __name__ == "__main__":
