@@ -211,7 +211,7 @@ def main():
                 view_data = input('Error. Please use \'yes\' or \'no.\' Would you like to view the individual trip data?\n')
         restart = input('\nWould you like to restart? Enter \'yes\' or \'no\'.\n')
         if restart.lower() != 'yes':
-            print('Have a wonderful day!\n')
+            print('Thank you for choosing to review US bikeshare data! Have a wonderful day!\n')
             print('-'*40)
             break
 
