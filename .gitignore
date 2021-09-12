@@ -1,1 +1,5 @@
-.github/**
+#Type: chore
+#create .gitignore file
+#ignore csv files for bikeshare project
+
+*.csv
