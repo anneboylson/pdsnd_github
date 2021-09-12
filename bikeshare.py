@@ -6,6 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -183,7 +184,6 @@ def user_stats(df, city, month, day):
     print('\nThe filters you selected are \nCity: {} \nMonth: {} \nDay: {}'.format(city, month, day))
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def main():
     while True:
