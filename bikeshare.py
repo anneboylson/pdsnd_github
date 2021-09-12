@@ -6,6 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -184,7 +185,6 @@ def user_stats(df, city, month, day):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def main():
     while True:
         city, month, day = get_filters()
@@ -211,7 +211,7 @@ def main():
                 view_data = input('Error. Please use \'yes\' or \'no.\' Would you like to view the individual trip data?\n')
         restart = input('\nWould you like to restart? Enter \'yes\' or \'no\'.\n')
         if restart.lower() != 'yes':
-            print('Thank you for choosing to review US bikeshare data! Have a wonderful day!\n')
+            print('Thank you for reviewing US bikeshare data! Have a wonderful day!\n')
             print('-'*40)
             break
 
