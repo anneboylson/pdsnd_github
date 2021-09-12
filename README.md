@@ -1,6 +1,5 @@
 ### Date created
-11/09/2021
-Include the date you created this project and README file.
+12/09/2021
 
 ### Project Title
 anneboylson/pdsnd_github
