@@ -8,7 +8,11 @@ anneboylson/pdsnd_github
 Update bikeshare.py and readme.md for assessment 3
 
 ### Files used
-Include the files used
+bikeshare.py
+README.md
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
