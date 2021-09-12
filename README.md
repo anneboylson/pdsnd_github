@@ -15,5 +15,7 @@ washington.csv
 new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://udacity.github.io/git-styleguide/.
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+https://git-scm.com/docs/gitignore#_pattern_format
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
