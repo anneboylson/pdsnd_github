@@ -3,11 +3,9 @@
 
 ### Project Title
 anneboylson/pdsnd_github
-Replace the Project Title
 
 ### Description
 Update bikeshare.py and readme.md for assessment 3
-Describe what your project is about and what it does
 
 ### Files used
 Include the files used
