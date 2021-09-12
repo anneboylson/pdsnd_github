@@ -8,9 +8,14 @@ anneboylson/pdsnd_github
 Update bikeshare.py and readme.md for assessment 3
 
 ### Files used
-README.md
 bikeshare.py
+README.md
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-https://udacity.github.io/git-styleguide/
-https://guides.github.com/activities/hello-world/
+https://udacity.github.io/git-styleguide
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+https://git-scm.com/docs/gitignore#_pattern_format
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
